@@ -11,9 +11,9 @@ Within the inventory environment, the following reinforcement learning terms are
 
 **Agent** – inventory manager that makes decisions regarding inventory
 
-**State space** – set of discrete states that indicate the inventory level
+**State space** – set of discrete states that indicate the inventory level; the size of the state space is n+1 (where n is the maximum inventory level)
 
-**Action space** – set of discrete actions the agent can take regarding the inventory; the actions are increase inventory by ordering more product and maintain current inventory quantity
+**Action space** – set of discrete actions the agent can take regarding the inventory; the possible actions are increase inventory by ordering more product and maintain current inventory quantity; the size of the action space is n+1
 
 **Reward** – profit achieved
 
@@ -32,17 +32,17 @@ The sale price, cost per unit, and holding cost are greater than 0.
 
 The reward function is:
 
-`r = -k * (a > 0) - c * max(min(x + a, m) - x, 0) - h * x + p * max(min(x + a, m) - y, 0)`
+`r = -k * (a > 0) - c * max(min(x + a, n) - x, 0) - h * x + p * max(min(x + a, n) - y, 0)`
 
 where:
 - `r`: reward
-- `k`: fixed order cost when the inventory quantity ordered is greater than 0
+- `k`: fixed order cost when the inventory quantity ordered is greater than 0; we set it as $5
 - `a`: inventory quantity ordered
-- `c`: cost per unit
+- `c`: cost per unit; we set it as $7
 - `x`: current inventory quantity
-- `m`: maximum inventory level
-- `h`: holding cost per unit
-- `p`: sale price per unit
+- `n`: maximum inventory level; we set it as 100 units
+- `h`: holding cost per unit; we set it as $2
+- `p`: sale price per unit; we set it as $20
 - `y`: updated inventory quantity
 
 ## Results
