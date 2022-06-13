@@ -53,7 +53,7 @@ Our best model was a two-layered neural network with 128 nodes in each layer tha
 
 Training a model with two layers of 128 nodes for 100,000 timesteps was not enough as it did not lead to reward convergence. The reward converged when training occurred for 200,000 timesteps but at a slightly lesser reward than the model that was trained for 500,000 timesteps.
 
-![Reward vs Timesteps when network architecture varies](/Figures/timestep_presentation.png)
+![Reward vs Timesteps when network architecture varies](/Figures/nn_presentation.png)
 ***Figure 2.*** Reward progression for models trained with various network architectures
 
 Among the neural network architectures we tried, the two-layered network with 128 nodes in each layer converged the earliest.
