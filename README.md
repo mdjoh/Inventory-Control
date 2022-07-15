@@ -46,7 +46,7 @@ where:
 - `y`: updated inventory quantity
 
 ## Results
-Our best model was a two-layered neural network with 128 nodes in each layer that trained with the PPO algorithm for 500,000 timesteps. It converged to a reward of approximately $8,000 per episode.
+Taking random actions to optimize inventory led to losses approaching $8,000 per quarter. This demonstrated a need for a trained policy. We used the proximal policy optimization (PPO) and advantage actor critic (A2C) algorithms to train a policy for this problem. Both algorithms resulted in profits but our best model was a two-layered neural network with 128 nodes in each layer that trained with the PPO algorithm for 500,000 timesteps. It converged to a reward of approximately $8,000 per episode.
 
 ![Reward vs Timesteps when training timesteps vary](/Figures/timestep_presentation.png)
 ***Figure 1.*** Reward progression for models trained with various number of timesteps
