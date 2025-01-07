@@ -61,12 +61,13 @@ Among the neural network architectures we tried, the two-layered network with 12
 ## Code in this Repository
 Core gym-inventory package files are found in the `gym_inventory` folder.
 
-Executable files and their description are as follows:\
+**Executable files and their description are as follows:**
+
 `inventory_control_random.py`: prints the starting and resulting states, action taken, demand, and reward when random actions are taken
 
 `inventory_control_A2Ctrain.py`: trains an A2C algorithm to find an optimal inventory control policy and outputs the reward of each training episode to a csv file via the Stable Baselines3 Monitor
 
 `inventory_control_PPOtrain.py`: trains an PPO algorithm to find an optimal inventory control policy and generates a Tensorboard log for training and outputs the reward of each training and prediction episode to a csv file via the Stable Baselines3 Monitor
 
-To run our code, gym-inventory must be installed.
+**Note:** To run our code, gym-inventory must be installed.
 Installation and run instructions are in our [RUNME](RUNME.md).
